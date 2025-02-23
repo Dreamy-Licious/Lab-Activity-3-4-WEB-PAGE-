@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Design Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #B0A46E;
+        }
+
+        .header {
+            background-color: #1B5448;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+        }
+
+        .nav {
+            background-color: #456943;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+            .nav a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+            }
+
+                .nav a:hover {
+                    background-color: #555;
+                }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1000px;
+            margin: 20px auto;
+            gap: 20px;
+
+        }
+
+        .intro-box {
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 2;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #1B5448;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .post {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+
+        }
+
+            .post img {
+                width: 100px;
+                height: 75px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            .post a {
+                color: blue;
+                text-decoration: none;
+            }
+
+                .post a:hover {
+                    text-decoration: underline;
+                }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to My Web Blog</h1>
+        <p>Sharing information about web design, HTML5, CSS, C#, and Motor Machines</p>
+    </div>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </div><div class="container">
+        <div class="intro-box">
+            <h2>Discover the World of Machine and Coding</h2>
+            <p>
+                In today’s rapidly evolving world, technology is no longer just a tool—it’s an integral part of everything we do. From the smartphones in our pockets to the algorithms that power our favorite apps, machines and coding are at the heart of it all. But what exactly goes on behind the scenes of these digital wonders? How do machines learn, think, and perform tasks that once seemed impossible?
+
+                Welcome to the exciting world of machine learning and coding—two fields that are reshaping industries and revolutionizing the way we live, work, and interact with the world.
+            </p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="main-content">
+                <h2>Latest Blog Posts</h2>
+                <div class="post">
+                    <img src="Seos engine.jpg" alt="Toyota Hilux Conquest V 4x4">
+                    <div>
+                        <h3>The Toyota Hilux Conquest V 4x4: A Rugged Champion</h3>
+                        <p>  When it comes to tough, reliable, and powerful pickup trucks, the Toyota Hilux has long been a leading choice. But, if you want the ultimate combination of rugged capability and premium features, the Toyota Hilux Conquest V 4x4 takes the crown. This model isn’t just for work—it’s built for adventure. Whether you're tackling off-road terrain, navigating city streets, or hauling heavy loads, the Hilux Conquest V 4x4 is up for the challenge.</p>
+                        <a href="https://toyota.com.ph/comparison/hilux/conquest-2-8-4x4-mt">Read More...</a>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="Coding blog.jpg" alt="Coding screen">
+                    <div>
+                        <h3>A Beginner's Guide to Coding</h3>
+                        <p>
+                            If you’ve ever wondered how websites are built, apps are developed, or even how video games come to life, then you’re already familiar with the magic of coding. But don't worry—if you’re new to it, coding isn’t as intimidating as it may seem. With the right mindset and a little patience, anyone can learn to code. In this beginner's guide, we’ll break down what coding is, why it’s important, and how you can start your coding journey today.
+
+                        </p>
+                        <a href="https://www.simplilearn.com/tutorials/programming-tutorial/coding-for-beginners">Read More...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I'm a first-year BSIT student at Adamson University. My passion for tech doesn't stop in the classroom. I love coding and exploring different aspects of software development.
+
+                    When I’m not studying or working on coding projects, you'll find me surrounded by cars and motors. Whether it's learning about the mechanics or just enjoying the thrill of high-performance vehicles, motorsports are a big part of my life.
+
+                    I’m excited to continue building my skills in both IT and my personal hobbies, aiming to blend technology with my love for motors and coding in the future.
+                </p>
+                <br /> 
+                <h3>Popular Topics</h3>
+                <ul>
+                    <li><a href="https://www.browserstack.com/guide/build-a-website-using-html-css  ">HTML & CSS Beginner Guide</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/shows/csharp-fundamentals-for-absolute-beginners/  ">Video Fundamentals for C#</a></li>
+                    <li><a href="https://www.socialectric.com/insights/master-the-art-of-website-design-5-essential-steps-to-success  ">The Art of Web Designing</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
+
