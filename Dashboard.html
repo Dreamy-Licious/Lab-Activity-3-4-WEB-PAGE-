@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car & Coding Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #B0A46E;
+        }
+
+        .header {
+            background-color: #1B5448;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+        }
+
+        .nav {
+            background-color: #456943;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .nav a:hover {
+            background-color: #555;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #1B5448;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            color: white;
+            box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            color: #F39C12;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #F39C12;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+
+        .topbar {
+            background-color: #1B5448;
+            color: white;
+            padding: 15px;
+            text-align: right;
+            font-size: 1.2rem;
+        }
+
+        .topbar i {
+            margin-left: 20px;
+        }
+
+        .dashboard {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 22%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #F39C12;
+        }
+
+        .card h3, .card span {
+            position: relative;
+            z-index: 1; /* Keep text on top of the image */
+            color: #333;
+        }
+
+        .card:hover h3, .card:hover span {
+            color: white; /* Make text white on hover */
+        }
+
+        /* Specific background images for each card */
+        .card.engine-health:hover {
+            background-image: url('HE.jpg'); /* Replace with your desired image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card.sales-revenue:hover {
+            background-image: url('THSR.jpg'); /* Replace with your desired image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card.code-commits:hover {
+            background-image: url('Remap.jpg'); /* Replace with your desired image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card.fuel-efficiency:hover {
+            background-image: url('Fuel.jpg'); /* Replace with your desired image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .charts {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .chart {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            flex: 1;
+            margin-right: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .chart p {
+            font-size: 1rem;
+            color: #B0B0B0;
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-right: 10px;
+            color: #F39C12;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1B5448;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Car & Coding</h2>
+        <ul>
+            <li><i class="icon">🏠</i>Home</li>
+            <li><i class="icon">ℹ️</i>About</li>
+            <li><i class="icon">📝</i>Blog</li>
+            <li><i class="icon">📞</i>Contact</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Bar -->
+        <div class="topbar">
+            <i class="icon">🛻</i>
+        </div>
+
+        <!-- Dashboard Overview -->
+        <h2></h2>
+        <div class="dashboard">
+            <div class="card engine-health">
+                <h3>Engine Health</h3>
+                <span>100%</span>
+            </div>
+            <div class="card sales-revenue">
+                <h3>Toyota Hilux sales revenue</h3>
+                <span>17.7 million units</span>
+            </div>
+            <div class="card code-commits">
+                <h3>Code Commits</h3>
+                <span>12,300</span>
+            </div>
+            <div class="card fuel-efficiency">
+                <h3>Fuel Efficiency</h3>
+                <span>10.7 - 12 KMPL</span>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts">
+            <div class="chart">
+                <h3>Car Performance and Info</h3>
+                <p style="color:black";>The Toyota Hilux is a powerhouse in the pickup truck segment, combining ruggedness with advanced technology, making it a top choice for both work and leisure. Under the hood, the Hilux offers a variety of engine choices: the 2.4L turbocharged diesel engine (2GD-FTV) that delivers 150 PS (148 hp) and 400 Nm of torque, the more powerful 2.8L turbo diesel engine (1GD-FTV) producing 204 PS (201 hp) and 500 Nm of torque, and the 2.7L petrol engine generating 166 PS (163 hp) and 245 Nm of torque. These engines are paired with either a 6-speed manual transmission for those who prefer control over their shifts or a 6-speed automatic transmission for smoother, effortless driving.
+
+The Hilux’s remarkable towing capacity allows it to pull up to 3,500 kg (7,700 lbs) for braked trailers, making it suitable for both commercial and recreational purposes, such as hauling large trailers, boats, or construction materials. Its advanced 4WD system, including high/low range gearing and rear differential lock, enables it to easily conquer rugged terrains like muddy tracks, rocky hills, and steep slopes. The 279 mm ground clearance ensures that the Hilux can easily navigate obstacles such as large rocks or uneven ground without compromising its stability.
+
+Performance-wise, the Hilux accelerates from 0-100 km/h (0-62 mph) in around 9.5 to 10 seconds with the 2.8L engine and 11-12 seconds with the 2.4L engine, which is impressive for a pickup truck. Despite being built for durability and load-bearing, it can still reach a top speed of approximately 180-200 km/h (112-124 mph) on highways.
+
+The Hilux also shines in the fuel economy department. With the 2.4L diesel engine offering an efficiency of 8.0–8.5 L/100 km (29-32 mpg) and the 2.8L diesel providing around 8.5–9.0 L/100 km (26-28 mpg), it balances performance and economy. The 2.7L petrol engine delivers a fuel efficiency of about 10.0 L/100 km (23-24 mpg) under combined driving conditions.
+
+Safety is a top priority with the Hilux, featuring Toyota’s comprehensive Safety Sense suite, which includes pre-collision system (PCS), lane departure alert (LDA), adaptive cruise control (ACC), automatic high beams, and stability control systems like Vehicle Stability Control (VSC) and Traction Control (TRC). The Hilux also boasts a 5-star crash safety rating, with its robust body structure and advanced safety technologies providing peace of mind during every journey.
+
+Off-road enthusiasts will appreciate the Hilux’s solid suspension setup, with an independent double wishbone front suspension for better handling, and leaf spring rear suspension, offering durability when carrying heavy loads. The cabin is spacious and designed for comfort, featuring sound insulation for a quieter ride, especially considering its rugged nature. The interior also includes modern tech such as a touchscreen infotainment system with Apple CarPlay and Android Auto, navigation, and a rearview camera.
+
+Moreover, the Hilux’s ride comfort doesn’t suffer despite its rugged design. Its suspension system and the heavy-duty nature of the truck make it comfortable enough for long journeys, both on highways and off-road tracks. Its turning radius allows it to navigate tight spaces, and its nimble handling on the road is a pleasant surprise for a vehicle of its size.
+
+In terms of variants, the Hilux comes in several trims, including the basic Workmate for heavy-duty use, the SR for more refined features, the SR5 for those who desire a higher-end version with premium finishes, and the Revo, the top-of-the-line model with advanced performance features and luxury interiors.
+
+To sum it up, the Toyota Hilux is not just a reliable workhorse, but a well-rounded and high-performing vehicle, ready to take on both the toughest jobs and the most challenging terrains with power, safety, and efficiency. Whether used for personal adventures or business needs, the Hilux combines tough reliability, excellent towing capabilities, and an impressive driving experience, making it one of the best pickups available today.</p>
+            </div>
+            <div class="chart">
+                <h3>Hilux Code Remap</h3>
+                <p style="color:black";>A more detailed ECU remap for the Toyota Hilux also involves tuning the transmission control module (TCM) to ensure the vehicle shifts gears more smoothly, optimizing the torque delivery during both on-road and off-road conditions. For the 2.8L turbo diesel engine, additional adjustments might include modifying the EGR (Exhaust Gas Recirculation) settings to improve throttle response while preventing carbon buildup, a common issue in diesel engines. The DPF (Diesel Particulate Filter) regeneration process can also be optimized to extend its lifespan and ensure better exhaust gas management.
+
+In addition to performance, a comprehensive ECU remap for the Hilux focuses on enhancing drivability. This can include adjusting the air intake temperature (AIT) thresholds to prevent overheat issues during heavy towing or long drives in hot environments. The remap also enables more efficient control of the intercooler system, ensuring cooler intake air temperatures, which improves combustion efficiency and prevents knock (pre-detonation), a concern in higher-performance settings.
+
+A remap might also involve adjusting the torque limiters within the ECU for better traction control when driving off-road, making it easier for the Hilux to handle tough terrains like mud, sand, and rocky paths by optimizing wheel spin and throttle modulation. For drivers looking to increase towing capacity, the ECU remap can adjust power delivery curves to allow for better load-handling capabilities, ensuring a safer and smoother towing experience, whether it's carrying trailers or heavy equipment.
+
+Furthermore, a customized ECU remap can improve fuel efficiency by precisely tuning the boost levels and injection timing, which helps reduce fuel consumption during steady cruising or highway driving. For those in harsh climates or extreme driving conditions, the remap can be customized to better suit engine performance under high altitudes or varying temperatures, ensuring the vehicle remains reliable regardless of external factors. The entire ECU tuning process is tailored to enhance the Hilux’s ability to deliver its best performance across all environments while maintaining optimal fuel economy and reducing engine wear.
+
+Overall, this detailed ECU remap process results in a more powerful, efficient, and versatile Toyota Hilux that performs optimally in all conditions—whether it's for urban commuting, highway cruising, off-roading adventures, or heavy-duty towing.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 Car & Coding Dashboard. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>
