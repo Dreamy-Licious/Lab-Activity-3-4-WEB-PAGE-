@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Design Blog</title>
     <style>
+        /* Reset default styles */
         * {
             margin: 0;
             padding: 0;
@@ -12,10 +14,15 @@
             font-family: Arial, sans-serif;
         }
 
+        /* Body styling */
         body {
             background-color: #B0A46E;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
+        /* Header styling */
         .header {
             background-color: #1B5448;
             color: white;
@@ -24,6 +31,7 @@
             position: relative;
         }
 
+        /* Navigation bar styling */
         .nav {
             background-color: #456943;
             display: flex;
@@ -31,16 +39,17 @@
             padding: 10px 0;
         }
 
-            .nav a {
-                color: white;
-                text-decoration: none;
-                padding: 10px 20px;
-            }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
 
-                .nav a:hover {
-                    background-color: #555;
-                }
+        .nav a:hover {
+            background-color: #555;
+        }
 
+        /* Main container styling */
         .container {
             display: flex;
             flex-direction: column;
@@ -48,8 +57,10 @@
             max-width: 1000px;
             margin: 20px auto;
             gap: 20px;
+            flex: 1; /* Allows content to take up remaining space */
         }
 
+        /* Intro box styling */
         .intro-box {
             width: 100%;
             background-color: white;
@@ -58,6 +69,7 @@
             text-align: center;
         }
 
+        /* Content wrapper styling */
         .content-wrapper {
             display: flex;
             flex-wrap: wrap;
@@ -65,6 +77,7 @@
             gap: 20px;
         }
 
+        /* Main content area styling */
         .main-content {
             flex: 2;
             background-color: white;
@@ -72,6 +85,7 @@
             border-radius: 5px;
         }
 
+        /* Sidebar styling */
         .sidebar {
             flex: 1;
             background-color: white;
@@ -79,18 +93,20 @@
             border-radius: 5px;
         }
 
+        /* Footer styling */
         .footer {
             background-color: #1B5448;
             color: white;
             text-align: center;
             padding: 50px;
-            margin-top: 20px;
+            margin-top: auto; /* Push footer to the bottom */
         }
 
         h2 {
             margin-bottom: 10px;
         }
 
+        /* Blog post styling */
         .post {
             display: flex;
             align-items: center;
@@ -100,30 +116,95 @@
             padding-bottom: 10px;
         }
 
-            .post img {
-                width: 100px;
-                height: 75px;
-                object-fit: cover;
-                border-radius: 5px;
-            }
+        .post img {
+            width: 100px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
 
-            .post a {
-                color: blue;
-                text-decoration: none;
-            }
+        .post a {
+            color: blue;
+            text-decoration: none;
+        }
 
-                .post a:hover {
-                    text-decoration: underline;
-                }
+        .post a:hover {
+            text-decoration: underline;
+        }
 
+        /* Media Query for tablets (max-width: 768px) */
         @media (max-width: 768px) {
             .content-wrapper {
                 flex-direction: column;
             }
+
+            .main-content,
+            .sidebar {
+                flex: 1;
+                width: 100%;
+            }
+
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                padding: 12px 0;
+                text-align: center;
+            }
+
+            .header {
+                padding: 30px 10px;
+            }
+
+            .footer {
+                padding: 30px 10px;
+            }
+
+            .post img {
+                width: 80px;
+                height: 60px;
+            }
+        }
+
+        /* Media Query for mobile phones (max-width: 480px) */
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .nav a {
+                font-size: 0.9em;
+            }
+
+            .post h3 {
+                font-size: 1.2em;
+            }
+
+            .intro-box {
+                padding: 15px;
+            }
+
+            .post img {
+                width: 70px;
+                height: 50px;
+            }
+
+            .footer {
+                padding: 20px 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer p {
+                font-size: 0.9em;
+            }
         }
     </style>
-
 </head>
+
 <body>
     <div class="header">
         <h1>Welcome to My Web Blog</h1>
@@ -134,7 +215,7 @@
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/About.html#">About</a>
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Blog.html">Blog</a>
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/ContacError.html">Contact</a>
-        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Dashboard.html">Dashboard</a> 
+        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Dashboard.html">Dashboard</a>
     </div>
     <div class="container">
         <div class="intro-box">
@@ -152,7 +233,7 @@
                     <img src="Seos engine.jpg" alt="Toyota Hilux Conquest V 4x4">
                     <div>
                         <h3>The Toyota Hilux Conquest V 4x4: A Rugged Champion</h3>
-                        <p>  When it comes to tough, reliable, and powerful pickup trucks, the Toyota Hilux has long been a leading choice. But, if you want the ultimate combination of rugged capability and premium features, the Toyota Hilux Conquest V 4x4 takes the crown. This model isn’t just for work—it’s built for adventure. Whether you're tackling off-road terrain, navigating city streets, or hauling heavy loads, the Hilux Conquest V 4x4 is up for the challenge.</p>
+                        <p> When it comes to tough, reliable, and powerful pickup trucks, the Toyota Hilux has long been a leading choice. But, if you want the ultimate combination of rugged capability and premium features, the Toyota Hilux Conquest V 4x4 takes the crown. This model isn’t just for work—it’s built for adventure. Whether you're tackling off-road terrain, navigating city streets, or hauling heavy loads, the Hilux Conquest V 4x4 is up for the challenge.</p>
                         <a href="https://toyota.com.ph/comparison/hilux/conquest-2-8-4x4-mt">Read More...</a>
                     </div>
                 </div>
@@ -189,6 +270,6 @@
     <div class="footer">
         <p>&copy; 2025 My Blog. All rights reserved.</p>
     </div>
-
 </body>
+
 </html>
