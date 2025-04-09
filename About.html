@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About This Website</title>
     <style>
@@ -14,6 +14,7 @@
 
         body {
             background-color: #B0A46E;
+            padding-bottom: 100px; /* Ensures space for the fixed footer */
         }
 
         .header {
@@ -26,14 +27,21 @@
         .nav {
             background-color: #456943;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centers the navigation links */
+            align-items: center; /* Ensures vertical alignment */
             padding: 10px 0;
+            position: sticky; /* Makes the navbar sticky */
+            top: 0;
+            z-index: 1000; /* Keeps the navbar above other content */
+            width: 100%; /* Ensures the nav bar spans the full width */
         }
 
             .nav a {
                 color: white;
                 text-decoration: none;
                 padding: 10px 20px;
+                display: block;
+                text-align: center; /* Ensures the text inside links are centered */
             }
 
                 .nav a:hover {
@@ -53,11 +61,46 @@
             background-color: #1B5448;
             color: white;
             text-align: center;
-            padding: 50px;
-            margin-top: 20px;
+            padding: 20px;
+            position: fixed; /* Keeps the footer at the bottom */
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column; /* Stacks nav items on smaller screens */
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .nav a {
+                padding: 8px 15px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                padding: 15px;
+            }
         }
     </style>
-
 </head>
 <body>
     <div class="header">
@@ -69,31 +112,31 @@
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/About.html">About</a>
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Blog.html">Blog</a>
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/ContacError.html">Contact</a>
-        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Dashboard.html">Dashboard</a> 
+        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Dashboard.html">Dashboard</a>
     </div>
     <div class="container">
         <h2>My Purpose for Creating This Website</h2>
-        <br />
+        <br>
         <p>
-        My journey into web development and motorsports is an exciting blend of creativity and technology. As a BSIT student, I’ve discovered the incredible power of coding languages like HTML, CSS, and C#, which allow me to bring ideas to life through websites and applications. Just like a car engine needs the right parts to function properly, coding relies on the right syntax and logic to create efficient, functional programs. With each line of code, I learn how to problem-solve and build systems that work seamlessly, just as car manufacturers engineer vehicles to run smoothly on the road.
+            My journey into web development and motorsports is an exciting blend of creativity and technology. As a BSIT student, I’ve discovered the incredible power of coding languages like HTML, CSS, and C#, which allow me to bring ideas to life through websites and applications. Just like a car engine needs the right parts to function properly, coding relies on the right syntax and logic to create efficient, functional programs. With each line of code, I learn how to problem-solve and build systems that work seamlessly, just as car manufacturers engineer vehicles to run smoothly on the road.
         </p>
-        <br /> 
-        <br />
+        <br>
+        <br>
         <p>
-        On the other hand, my love for motorsports has taught me the importance of precision, speed, and optimization—traits that are essential both on the racetrack and in the world of coding. Just like engineers refine car designs to achieve peak performance, developers continually tweak and optimize their code to make sure everything runs at its best. Through this blog, I aim to connect my passion for programming with the thrill of motorsports by exploring the intersection of technology and automobiles. I’ll share tutorials on building websites, coding challenges, and the latest advancements in car technology, such as how artificial intelligence is used in modern vehicles.
+            On the other hand, my love for motorsports has taught me the importance of precision, speed, and optimization—traits that are essential both on the racetrack and in the world of coding. Just like engineers refine car designs to achieve peak performance, developers continually tweak and optimize their code to make sure everything runs at its best. Through this blog, I aim to connect my passion for programming with the thrill of motorsports by exploring the intersection of technology and automobiles. I’ll share tutorials on building websites, coding challenges, and the latest advancements in car technology, such as how artificial intelligence is used in modern vehicles.
         </p>
-        <br />
-        <br />
+        <br>
+        <br>
         For those interested in both fields, this blog will showcase how coding is integral to the development of automotive technologies, from self-driving cars to performance analysis tools. Coding and motorsports both involve continuous learning, adaptability, and innovation—traits that I’m eager to share with fellow enthusiasts. Whether you’re interested in creating your own racing simulation game or learning how to code a car diagnostic tool, this space is for you. Together, we can explore the exciting relationship between technology and motorsport and continue to grow as coders.
         <p>
-            <br />
-            <br />
+            <br>
+            <br>
             My goal is to provide useful insights, tutorials, and articles that can help beginners and enthusiasts alike.
             Whether you are interested in coding or machines, this blog serves as a place to learn and grow together.
         </p>
     </div>
     <div class="footer">
-        <p>&copy; 2025 My Blog. All rights reserved.</p>
+        <p>© 2025 My Blog. All rights reserved.</p>
     </div>
 </body>
 </html>
