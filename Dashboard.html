@@ -14,6 +14,7 @@
 
         body {
             background-color: #B0A46E;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .header {
@@ -31,58 +32,61 @@
             padding: 10px 0;
         }
 
-        .nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-        }
+            .nav a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+            }
 
-        .nav a:hover {
-            background-color: #555;
-        }
+                .nav a:hover {
+                    background-color: #555;
+                }
 
+        /* Sidebar styles */
         .sidebar {
             width: 250px;
             height: 100vh;
             background-color: #1B5448;
             position: fixed;
             top: 0;
-            left: 0;
+            left: -250px; /* Initially hidden */
             padding-top: 20px;
             color: #F39C12;
             box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: left 0.3s ease; /* Sliding effect */
         }
 
-        .sidebar h2 {
-            text-align: center;
-            color: #F39C12;
-        }
+            .sidebar h2 {
+                text-align: center;
+                color: #F39C12;
+            }
 
-        .sidebar ul li a {
-            color: white; 
-            text-decoration: none;
-        }
+            .sidebar ul li a {
+                color: white;
+                text-decoration: none;
+            }
 
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
+            .sidebar ul {
+                list-style-type: none;
+                padding: 0;
+            }
 
-        .sidebar ul li {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+                .sidebar ul li {
+                    padding: 15px;
+                    text-align: left;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
 
-        .sidebar ul li:hover {
-            background-color: #F39C12;
-        }
+                    .sidebar ul li:hover {
+                        background-color: #F39C12;
+                    }
 
         .main-content {
-            margin-left: 260px;
+            margin-left: 0;
             padding: 20px;
+            transition: margin-left 0.3s ease; /* Adjust main content when sidebar is toggled */
         }
 
         .topbar {
@@ -93,12 +97,13 @@
             font-size: 1.2rem;
         }
 
-        .topbar i {
-            margin-left: 20px;
-        }
+            .topbar i {
+                margin-left: 20px;
+            }
 
         .dashboard {
             display: flex;
+            flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
             justify-content: space-between;
             margin-top: 20px;
         }
@@ -113,58 +118,65 @@
             position: relative;
             transition: transform 0.3s ease;
             overflow: hidden;
+            margin-bottom: 20px; /* Space between cards */
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+            .card:hover {
+                transform: translateY(-5px);
+            }
 
-        .card h3 {
-            margin: 10px 0;
-        }
+            .card h3 {
+                margin: 10px 0;
+            }
 
-        .card span {
-            font-size: 24px;
-            font-weight: bold;
-            color: #F39C12;
-        }
+            .card span {
+                font-size: 24px;
+                font-weight: bold;
+                color: #F39C12;
+            }
 
-        .card h3, .card span {
-            position: relative;
-            z-index: 1; 
-            color: #333;
-        }
+            .card h3, .card span {
+                position: relative;
+                z-index: 1;
+                color: #333;
+            }
 
-        .card:hover h3, .card:hover span {
-            color: white;  
-        }
+            .card:hover h3, .card:hover span {
+                color: white;
+            }
 
-        .card.engine-health:hover {
-            background-image: url('HE.jpg');  
-            background-size: cover;
-            background-position: center;
-        }
+            /* Hover effects with no-repeat background */
+            .card.engine-health:hover {
+                background-image: url('HE.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat; /* Prevent repeat */
+            }
 
-        .card.sales-revenue:hover {
-            background-image: url('THSR.jpg'); 
-            background-size: cover;
-            background-position: center;
-        }
+            .card.sales-revenue:hover {
+                background-image: url('THSR.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat; /* Prevent repeat */
+            }
 
-        .card.code-commits:hover {
-            background-image: url('Remap.jpg'); 
-            background-size: cover;
-            background-position: center;
-        }
+            .card.code-commits:hover {
+                background-image: url('Remap.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat; /* Prevent repeat */
+            }
 
-        .card.fuel-efficiency:hover {
-            background-image: url('Fuel.jpg'); 
-            background-size: cover;
-            background-position: center;
-        }
+            .card.fuel-efficiency:hover {
+                background-image: url('Fuel.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat; /* Prevent repeat */
+            }
 
         .charts {
             display: flex;
+            flex-wrap: wrap; /* Ensure charts wrap on smaller screens */
             margin-top: 20px;
         }
 
@@ -175,17 +187,18 @@
             flex: 1;
             margin-right: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Space between charts */
         }
 
-        .chart h3 {
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
+            .chart h3 {
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+            }
 
-        .chart p {
-            font-size: 1rem;
-            color: #B0B0B0;
-        }
+            .chart p {
+                font-size: 1rem;
+                color: #B0B0B0;
+            }
 
         .icon {
             font-size: 30px;
@@ -204,6 +217,7 @@
         /* New Styles for the YouTube Iframes */
         .youtube-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             gap: 20px;
             margin-top: 20px;
@@ -211,10 +225,69 @@
 
         iframe {
             border: none;
+            width: 100%; /* Make videos responsive */
+            height: 300px;
+            max-width: 420px;
+        }
+
+        /* Toggle button */
+        .toggle-btn {
+            background-color: #1B5448;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+            .toggle-btn:hover {
+                background-color: #456943;
+            }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .sidebar {
+                left: -250px; /* Ensure the sidebar starts hidden on small screens */
+                width: 200px;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .dashboard .card {
+                width: 45%; /* Cards become larger on smaller screens */
+            }
+
+            .charts .chart {
+                margin-right: 0;
+                width: 100%; /* Charts take full width on smaller screens */
+            }
+
+            .youtube-container iframe {
+                width: 100%;
+                height: 200px; /* Adjust iframe size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dashboard .card {
+                width: 100%; /* Cards stack on top of each other on very small screens */
+            }
+
+            .charts .chart {
+                width: 100%; /* Charts stack on small screens */
+            }
         }
     </style>
 </head>
 <body>
+
+    <button class="toggle-btn" onclick="toggleSidebar()">☰ Toggle Sidebar</button>
 
     <div class="sidebar">
         <h2>Car & Coding</h2>
@@ -255,48 +328,67 @@
         <div class="charts">
             <div class="chart">
                 <h3>Car Performance and Info</h3>
-                <p style="color:black;">The Toyota Hilux is a powerhouse in the pickup truck segment, combining ruggedness with advanced technology, making it a top choice for both work and leisure. Under the hood, the Hilux offers a variety of engine choices: the 2.4L turbocharged diesel engine (2GD-FTV) that delivers 150 PS (148 hp) and 400 Nm of torque, the more powerful 2.8L turbo diesel engine (1GD-FTV) producing 204 PS (201 hp) and 500 Nm of torque, and the 2.7L petrol engine generating 166 PS (163 hp) and 245 Nm of torque. These engines are paired with either a 6-speed manual transmission for those who prefer control over their shifts or a 6-speed automatic transmission for smoother, effortless driving.
+                <p style="color:black;">
+                    The Toyota Hilux is a powerhouse in the pickup truck segment, combining ruggedness with advanced technology, making it a top choice for both work and leisure. Under the hood, the Hilux offers a variety of engine choices: the 2.4L turbocharged diesel engine (2GD-FTV) that delivers 150 PS (148 hp) and 400 Nm of torque, the more powerful 2.8L turbo diesel engine (1GD-FTV) producing 204 PS (201 hp) and 500 Nm of torque, and the 2.7L petrol engine generating 166 PS (163 hp) and 245 Nm of torque. These engines are paired with either a 6-speed manual transmission for those who prefer control over their shifts or a 6-speed automatic transmission for smoother, effortless driving.
 
-The Hilux’s remarkable towing capacity allows it to pull up to 3,500 kg (7,700 lbs) for braked trailers, making it suitable for both commercial and recreational purposes, such as hauling large trailers, boats, or construction materials. Its advanced 4WD system, including high/low range gearing and rear differential lock, enables it to easily conquer rugged terrains like muddy tracks, rocky hills, and steep slopes. The 279 mm ground clearance ensures that the Hilux can easily navigate obstacles such as large rocks or uneven ground without compromising its stability.
+                    The Hilux’s remarkable towing capacity allows it to pull up to 3,500 kg (7,700 lbs) for braked trailers, making it suitable for both commercial and recreational purposes, such as hauling large trailers, boats, or construction materials. Its advanced 4WD system, including high/low range gearing and rear differential lock, enables it to easily conquer rugged terrains like muddy tracks, rocky hills, and steep slopes. The 279 mm ground clearance ensures that the Hilux can easily navigate obstacles such as large rocks or uneven ground without compromising its stability.
 
-Performance-wise, the Hilux accelerates from 0-100 km/h (0-62 mph) in around 9.5 to 10 seconds with the 2.8L engine and 11-12 seconds with the 2.4L engine, which is impressive for a pickup truck. Despite being built for durability and load-bearing, it can still reach a top speed of approximately 180-200 km/h (112-124 mph) on highways.
+                    Performance-wise, the Hilux accelerates from 0-100 km/h (0-62 mph) in around 9.5 to 10 seconds with the 2.8L engine and 11-12 seconds with the 2.4L engine, which is impressive for a pickup truck. Despite being built for durability and load-bearing, it can still reach a top speed of approximately 180-200 km/h (112-124 mph) on highways.
 
-The Hilux also shines in the fuel economy department. With the 2.4L diesel engine offering an efficiency of 8.0–8.5 L/100 km (29-32 mpg) and the 2.8L diesel providing around 8.5–9.0 L/100 km (26-28 mpg), it balances performance and economy. The 2.7L petrol engine delivers a fuel efficiency of about 10.0 L/100 km (23-24 mpg) under combined driving conditions.
+                    The Hilux also shines in the fuel economy department. With the 2.4L diesel engine offering an efficiency of 8.0–8.5 L/100 km (29-32 mpg) and the 2.8L diesel providing around 8.5–9.0 L/100 km (26-28 mpg), it balances performance and economy. The 2.7L petrol engine delivers a fuel efficiency of about 10.0 L/100 km (23-24 mpg) under combined driving conditions.
 
-Safety is a top priority with the Hilux, featuring Toyota’s comprehensive Safety Sense suite, which includes pre-collision system (PCS), lane departure alert (LDA), adaptive cruise control (ACC), automatic high beams, and stability control systems like Vehicle Stability Control (VSC) and Traction Control (TRC). The Hilux also boasts a 5-star crash safety rating, with its robust body structure and advanced safety technologies providing peace of mind during every journey.
+                    Safety is a top priority with the Hilux, featuring Toyota’s comprehensive Safety Sense suite, which includes pre-collision system (PCS), lane departure alert (LDA), adaptive cruise control (ACC), automatic high beams, and stability control systems like Vehicle Stability Control (VSC) and Traction Control (TRC). The Hilux also boasts a 5-star crash safety rating, with its robust body structure and advanced safety technologies providing peace of mind during every journey.
 
-Off-road enthusiasts will appreciate the Hilux’s solid suspension setup, with an independent double wishbone front suspension for better handling, and leaf spring rear suspension, offering durability when carrying heavy loads. The cabin is spacious and designed for comfort, featuring sound insulation for a quieter ride, especially considering its rugged nature. The interior also includes modern tech such as a touchscreen infotainment system with Apple CarPlay and Android Auto, navigation, and a rearview camera.
+                    Off-road enthusiasts will appreciate the Hilux’s solid suspension setup, with an independent double wishbone front suspension for better handling, and leaf spring rear suspension, offering durability when carrying heavy loads. The cabin is spacious and designed for comfort, featuring sound insulation for a quieter ride, especially considering its rugged nature. The interior also includes modern tech such as a touchscreen infotainment system with Apple CarPlay and Android Auto, navigation, and a rearview camera.
 
-Moreover, the Hilux’s ride comfort doesn’t suffer despite its rugged design. Its suspension system and the heavy-duty nature of the truck make it comfortable enough for long journeys, both on highways and off-road tracks. Its turning radius allows it to navigate tight spaces, and its nimble handling on the road is a pleasant surprise for a vehicle of its size.
+                    Moreover, the Hilux’s ride comfort doesn’t suffer despite its rugged design. Its suspension system and the heavy-duty nature of the truck make it comfortable enough for long journeys, both on highways and off-road tracks. Its turning radius allows it to navigate tight spaces, and its nimble handling on the road is a pleasant surprise for a vehicle of its size.
 
-In terms of variants, the Hilux comes in several trims, including the basic Workmate for heavy-duty use, the SR for more refined features, the SR5 for those who desire a higher-end version with premium finishes, and the Revo, the top-of-the-line model with advanced performance features and luxury interiors.
+                    In terms of variants, the Hilux comes in several trims, including the basic Workmate for heavy-duty use, the SR for more refined features, the SR5 for those who desire a higher-end version with premium finishes, and the Revo, the top-of-the-line model with advanced performance features and luxury interiors.
 
-To sum it up, the Toyota Hilux is not just a reliable workhorse, but a well-rounded and high-performing vehicle, ready to take on both the toughest jobs and the most challenging terrains with power, safety, and efficiency. Whether used for personal adventures or business needs, the Hilux combines tough reliability, excellent towing capabilities, and an impressive driving experience, making it one of the best pickups available today.</p>
+                    To sum it up, the Toyota Hilux is not just a reliable workhorse, but a well-rounded and high-performing vehicle, ready to take on both the toughest jobs and the most challenging terrains with power, safety, and efficiency. Whether used for personal adventures or business needs, the Hilux combines tough reliability, excellent towing capabilities, and an impressive driving experience, making it one of the best pickups available today.
+                </p>
             </div>
             <div class="chart">
                 <h3>Hilux Code Remap</h3>
-                <p style="color:black;">A more detailed ECU remap for the Toyota Hilux also involves tuning the transmission control module (TCM) to ensure the vehicle shifts gears more smoothly, optimizing the torque delivery during both on-road and off-road conditions. For the 2.8L turbo diesel engine, additional adjustments might include modifying the EGR (Exhaust Gas Recirculation) settings to improve throttle response while preventing carbon buildup, a common issue in diesel engines. The DPF (Diesel Particulate Filter) regeneration process can also be optimized to extend its lifespan and ensure better exhaust gas management.
+                <p style="color:black;">
+                    Toyota Hilux also involves tuning the transmission control module (TCM) to ensure the vehicle shifts gears more smoothly, optimizing the torque delivery during both on-road and off-road conditions. For the 2.8L turbo diesel engine, additional adjustments might include modifying the EGR (Exhaust Gas Recirculation) settings to improve throttle response while preventing carbon buildup, a common issue in diesel engines. The DPF (Diesel Particulate Filter) regeneration process can also be optimized to extend its lifespan and ensure better exhaust gas management.
 
-In addition to performance, a comprehensive ECU remap for the Hilux focuses on enhancing drivability. This can include adjusting the air intake temperature (AIT) thresholds to prevent overheat issues during heavy towing or long drives in hot environments. The remap also enables more efficient control of the intercooler system, ensuring cooler intake air temperatures, which improves combustion efficiency and prevents knock (pre-detonation), a concern in higher-performance settings.
+                    In addition to performance, a comprehensive ECU remap for the Hilux focuses on enhancing drivability. This can include adjusting the air intake temperature (AIT) thresholds to prevent overheat issues during heavy towing or long drives in hot environments. The remap also enables more efficient control of the intercooler system, ensuring cooler intake air temperatures, which improves combustion efficiency and prevents knock (pre-detonation), a concern in higher-performance settings.
 
-A remap might also involve adjusting the torque limiters within the ECU for better traction control when driving off-road, making it easier for the Hilux to handle tough terrains like mud, sand, and rocky paths by optimizing wheel spin and throttle modulation. For drivers looking to increase towing capacity, the ECU remap can adjust power delivery curves to allow for better load-handling capabilities, ensuring a safer and smoother towing experience, whether it's carrying trailers or heavy equipment.
+                    A remap might also involve adjusting the torque limiters within the ECU for better traction control when driving off-road, making it easier for the Hilux to handle tough terrains like mud, sand, and rocky paths by optimizing wheel spin and throttle modulation. For drivers looking to increase towing capacity, the ECU remap can adjust power delivery curves to allow for better load-handling capabilities, ensuring a safer and smoother towing experience, whether it's carrying trailers or heavy equipment.
 
-Furthermore, a customized ECU remap can improve fuel efficiency by precisely tuning the boost levels and injection timing, which helps reduce fuel consumption during steady cruising or highway driving. For those in harsh climates or extreme driving conditions, the remap can be customized to better suit engine performance under high altitudes or varying temperatures, ensuring the vehicle remains reliable regardless of external factors. The entire ECU tuning process is tailored to enhance the Hilux’s ability to deliver its best performance across all environments while maintaining optimal fuel economy and reducing engine wear.
+                    Furthermore, a customized ECU remap can improve fuel efficiency by precisely tuning the boost levels and injection timing, which helps reduce fuel consumption during steady cruising or highway driving. For those in harsh climates or extreme driving conditions, the remap can be customized to better suit engine performance under high altitudes or varying temperatures, ensuring the vehicle remains reliable regardless of external factors. The entire ECU tuning process is tailored to enhance the Hilux’s ability to deliver its best performance across all environments while maintaining optimal fuel economy and reducing engine wear.
 
-Overall, this detailed ECU remap process results in a more powerful, efficient, and versatile Toyota Hilux that performs optimally in all conditions—whether it's for urban commuting, highway cruising, off-roading adventures, or heavy-duty towing.</p>
+                    Overall, this detailed ECU remap process results in a more powerful, efficient, and versatile Toyota Hilux that performs optimally in all conditions—whether it's for urban commuting, highway cruising, off-roading adventures, or heavy-duty towing.
+                </p>
             </div>
         </div>
 
         <div class="youtube-container">
-            <iframe width="420" height="345" src="https://www.youtube.com/embed/48ocnQ4pqyI?si=u53r6tR3YbviVxTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="420" height="345" src="https://www.youtube.com/embed/D3f1lqrp5Jo?si=RXb4iYmo8RhddAM1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="420" height="345" src="https://www.youtube.com/embed/w2olVdkCvpk?si=D8490tLvX9XUpi9G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/48ocnQ4pqyI?si=u53r6tR3YbviVxTk" title="YouTube video player"></iframe>
+            <iframe src="https://www.youtube.com/embed/D3f1lqrp5Jo?si=RXb4iYmo8RhddAM1" title="YouTube video player"></iframe>
+            <iframe src="https://www.youtube.com/embed/w2olVdkCvpk?si=D8490tLvX9XUpi9G" title="YouTube video player"></iframe>
         </div>
 
         <div class="footer">
             <p>&copy; 2025 Car & Coding Dashboard. All rights reserved.</p>
         </div>
     </div>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            var mainContent = document.querySelector('.main-content');
+
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px';
+                mainContent.style.marginLeft = '0';
+            } else {
+                sidebar.style.left = '0';
+                mainContent.style.marginLeft = '250px';
+            }
+        }
+    </script>
 
 </body>
 </html>
