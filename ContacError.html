@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Not Available</title>
+    <title>Contact Us</title>
     <style>
         * {
             margin: 0;
@@ -13,56 +13,165 @@
         }
 
         body {
-            background-color: #940000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #B0A46E;
+            padding-bottom: 100px; /* Ensures space for the fixed footer */
+        }
+
+        .header {
+            background-color: #1B5448;
+            color: white;
             text-align: center;
+            padding: 50px;
         }
 
-        .error-container {
+        .nav {
+            background-color: #456943;
+            display: flex;
+            justify-content: center; /* Centers the navigation links */
+            align-items: center; /* Ensures vertical alignment */
+            padding: 10px 0;
+            position: sticky; /* Makes the navbar sticky */
+            top: 0;
+            z-index: 1000; /* Keeps the navbar above other content */
+            width: 100%; /* Ensures the nav bar spans the full width */
+        }
+
+            .nav a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+                display: block;
+                text-align: center; /* Ensures the text inside links are centered */
+            }
+
+                .nav a:hover {
+                    background-color: #555;
+                }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
             background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+            line-height: 1.6;
         }
 
-        .error-icon {
-            font-size: 50px;
-            color: #721c24;
-        }
-
-        h1 {
-            color: #721c24;
-            margin: 15px 0;
-        }
-
-        p {
-            color: #721c24;
+        h2 {
             margin-bottom: 20px;
         }
 
-        .btn {
-            background-color: #721c24;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
+        h3 {
+            margin-top: 20px;
         }
 
-            .btn:hover {
-                background-color: #a94442;
+        .footer {
+            background-color: #1B5448;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed; /* Keeps the footer at the bottom */
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column; /* Stacks nav items on smaller screens */
             }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .nav a {
+                padding: 8px 15px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="error-container">
-        <div class="error-icon">&#9888;</div>
-        <h1>Contact Not Available</h1>
-        <p>Sorry, the contact information you are looking for is currently unavailable. Please try again later. (This is a design feature, there is no really an error)</p>
-        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/HTMLPage1.html" class="btn">Go Back</a>
+    <div class="header">
+        <h1>Contact Us - About the Website & Creator</h1>
+        <p>Learn more about this website and the creator.</p>
+    </div>
+    <div class="nav">
+        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/HTMLPage1.html">Home</a>
+        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/About.html">About</a>
+        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Blog.html">Blog</a>
+        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/ContacError.html">Contact</a>
+        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Dashboard.html">Dashboard</a>
+        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Gallery%20page.html">Gallery</a>
+    </div>
+    <div class="container">
+        <h2>About This Website</h2>
+        <p>
+            Welcome to my website! This site was created to showcase my passion for web development and motorsports. As a student in BSIT, I've combined my love for technology with my interest in racing, resulting in this platform to explore coding, tutorials, and automotive topics.
+        </p>
+        <p>
+            If you're looking for information on coding techniques, web development tutorials, or the latest trends in motorsports and technology, you've come to the right place! Feel free to explore the blog, gallery, and dashboard for some exciting content.
+        </p>
+        <br />
+        <h2>About the Creator</h2>
+        <p>
+            Hi! I'm a web development enthusiast and a BSIT student with a passion for both technology and motorsports. I've always been fascinated by how technology drives innovation, whether it's in creating websites or designing high-performance vehicles.
+        </p>
+        <p>
+            This website represents my journey of combining these two worlds. I love sharing knowledge through tutorials and articles, and I'm always eager to connect with others who share similar interests in coding, tech, or racing.
+        </p>
+        <br />
+        <h2>Contact the Creator</h2>
+        <p>
+            If you have any questions, suggestions, or simply want to connect, feel free to reach out to me. I'm happy to discuss web development, motorsports, or anything else you're interested in. You can contact me directly via email, or use the form below to send a message.
+        </p>
+        <br />
+        <h3>Reach Me Via Email</h3>
+        <p>Email: <a href="mailto:john.marloh.taylan@adamson.edu.ph">john.marloh.taylan@adamson.edu.ph</a></p>
+
+        <h3>Or Use the Contact Form Below:</h3>
+        <form action="mailto:john.marloh.taylan@adamson.edu.ph" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+
+        <h2>Creator Information</h2>
+        <p><strong>Website Creator:</strong> John Marloh G. Taylan</p>
+        <p><strong>Address:</strong> Cavite, Bacoor City, Niog II</p>
+        <p><strong>Contact No:</strong> 0912345678</p>
+        <p><strong>School:</strong> Adamson University</p>
+        <p><strong>Subject:</strong> Web Design Principle Lab</p>
+    </div>
+    <div class="footer">
+        <p>© 2025 My Blog. All rights reserved.</p>
     </div>
 </body>
 </html>
