@@ -1,21 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
     <style>
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing: border-box; /* Ensure that padding and borders are included in the element's total width and height */
             font-family: Arial, sans-serif;
         }
 
+        /* Body Styles */
         body {
             background-color: #B0A46E;
         }
 
+        /* Header Section */
         .header {
             background-color: #1B5448;
             color: white;
@@ -24,6 +27,7 @@
             position: relative;
         }
 
+        /* Navigation Section */
         .nav {
             background-color: #456943;
             display: flex;
@@ -34,13 +38,14 @@
             .nav a {
                 color: white;
                 text-decoration: none;
-                padding: 10px 20px;
+                padding: 10px 20px; /* Padding inside navigation links */
             }
 
                 .nav a:hover {
                     background-color: #555;
                 }
 
+        /* Main Content Container */
         .container {
             max-width: 1000px;
             margin: 20px auto;
@@ -49,19 +54,22 @@
             gap: 20px;
         }
 
+        /* Blog Post Styling */
         .blog-post {
             background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px; /* Padding around the blog post content */
+            border-radius: 5px; /* Rounded corners for the blog post */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the blog post */
+            margin-bottom: 30px; /* Added margin-bottom to create space outside each blog post */
         }
 
             .blog-post img {
-                width: 100%;
-                height: auto;
-                border-radius: 5px;
+                width: 100%; /* Ensures the image covers the full width of the container */
+                height: auto; /* Maintain aspect ratio of the image */
+                border-radius: 5px; /* Rounded corners for the image */
             }
 
+        /* Footer Section */
         .footer {
             background-color: #1B5448;
             color: white;
@@ -70,7 +78,6 @@
             margin-top: 20px;
         }
     </style>
-
 </head>
 <body>
     <div class="header">
@@ -82,7 +89,7 @@
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/About.html">About</a>
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Blog.html">Blog</a>
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/ContacError.html">Contact</a>
-        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Dashboard.html">Dashboard</a> 
+        <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Dashboard.html">Dashboard</a>
     </div>
     <div class="container">
         <div class="blog-post">
@@ -107,7 +114,8 @@
             <h2>Is Coding Hard? Breaking Down the Myths and Realitiess</h2>
             <img src="ICH.jpg" alt="ICHard">
             <p>
-                When it comes to learning how to code, many people are intimidated by the idea, assuming it’s a difficult and complex skill to master. But the truth is, coding isn’t inherently hard—it just requires patience, persistence, and the right approach. Like learning any new skill, coding takes time to understand, and everyone starts as a beginner. While there are challenges along the way, the key is to break coding down into smaller, manageable steps, focusing on one concept at a time. With the abundance of online resources, coding tutorials, and communities offering support, it’s easier than ever to get started, making coding accessible to anyone with the willingness to learn.</p>
+                When it comes to learning how to code, many people are intimidated by the idea, assuming it’s a difficult and complex skill to master. But the truth is, coding isn’t inherently hard—it just requires patience, persistence, and the right approach. Like learning any new skill, coding takes time to understand, and everyone starts as a beginner. While there are challenges along the way, the key is to break coding down into smaller, manageable steps, focusing on one concept at a time. With the abundance of online resources, coding tutorials, and communities offering support, it’s easier than ever to get started, making coding accessible to anyone with the willingness to learn.
+            </p>
             <a href="https://www.codingdojo.com/blog/is-coding-hard">Read More...</a>
         </div>
         <div class="blog-post">
