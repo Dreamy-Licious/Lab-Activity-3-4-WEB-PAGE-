@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -56,7 +56,19 @@
             background-color: white;
             padding: 20px;
             border-radius: 5px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .container img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .container .text-content {
+            max-width: 55%;
         }
 
         .footer {
@@ -82,6 +94,17 @@
             .container {
                 width: 90%;
                 padding: 15px;
+                flex-direction: column; /* Stacks the image and text on top of each other */
+                text-align: center;
+            }
+
+            .container img {
+                max-width: 80%;
+                margin-bottom: 15px;
+            }
+
+            .container .text-content {
+                max-width: 100%;
             }
         }
 
@@ -118,25 +141,19 @@
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Gallery%20page.html">Gallery</a>
     </div>
     <div class="container">
-        <h2>My Purpose for Creating This Website</h2>
-        <br>
-        <p>
-            My journey into web development and motorsports is an exciting blend of creativity and technology. As a BSIT student, I’ve discovered the incredible power of coding languages like HTML, CSS, and C#, which allow me to bring ideas to life through websites and applications. Just like a car engine needs the right parts to function properly, coding relies on the right syntax and logic to create efficient, functional programs. With each line of code, I learn how to problem-solve and build systems that work seamlessly, just as car manufacturers engineer vehicles to run smoothly on the road.
-        </p>
-        <br>
-        <br>
-        <p>
-            On the other hand, my love for motorsports has taught me the importance of precision, speed, and optimization—traits that are essential both on the racetrack and in the world of coding. Just like engineers refine car designs to achieve peak performance, developers continually tweak and optimize their code to make sure everything runs at its best. Through this blog, I aim to connect my passion for programming with the thrill of motorsports by exploring the intersection of technology and automobiles. I’ll share tutorials on building websites, coding challenges, and the latest advancements in car technology, such as how artificial intelligence is used in modern vehicles.
-        </p>
-        <br>
-        <br>
-        For those interested in both fields, this blog will showcase how coding is integral to the development of automotive technologies, from self-driving cars to performance analysis tools. Coding and motorsports both involve continuous learning, adaptability, and innovation—traits that I’m eager to share with fellow enthusiasts. Whether you’re interested in creating your own racing simulation game or learning how to code a car diagnostic tool, this space is for you. Together, we can explore the exciting relationship between technology and motorsport and continue to grow as coders.
-        <p>
-            <br>
-            <br>
-            My goal is to provide useful insights, tutorials, and articles that can help beginners and enthusiasts alike.
-            Whether you are interested in coding or machines, this blog serves as a place to learn and grow together.
-        </p>
+        <img src="JMC.jpg" alt="Image description">
+        <div class="text-content">
+            <h2>My Purpose for Creating This Website</h2>
+            <p>
+                As a BSIT student, I've been able to combine my interest in coding with my passion for motorsports. Coding languages like HTML, CSS, and C# are tools that let me turn ideas into websites and applications, much like how engines are built with specific parts to run smoothly. In coding, just like in car manufacturing, precision and problem-solving are key. Each line of code adds functionality, similar to how a car engine relies on precise components.
+            </p>
+            <p>
+                My love for motorsports has also taught me the importance of speed and optimization. Just as engineers optimize cars for peak performance, I constantly refine my code to ensure it runs smoothly. Through this blog, I aim to connect these worlds of technology and motorsports, sharing how coding is used to create everything from car diagnostic tools to racing simulation games.
+            </p>
+            <p>
+                This space will explore the intersection of automotive technologies and programming, from self-driving cars to performance analysis tools. I want to provide tutorials and insights that help enthusiasts in both fields learn and innovate. Whether you're curious about car tech or coding, this blog is where technology meets speed and precision.
+            </p>
+        </div>
     </div>
     <div class="footer">
         <p>© 2025 My Blog. All rights reserved.</p>
