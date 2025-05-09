@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us</title>
+    <title>Contact</title>
     <style>
+        /* Reset default styles */
         * {
             margin: 0;
             padding: 0;
@@ -12,65 +13,103 @@
             font-family: Arial, sans-serif;
         }
 
+        /* Body styling */
         body {
             background-color: #B0A46E;
-            padding-bottom: 100px; /* Ensures space for the fixed footer */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
+        /* Header styling */
         .header {
             background-color: #1B5448;
             color: white;
             text-align: center;
-            padding: 50px;
+            padding: 30px; /* Reduced padding */
+            position: relative;
         }
 
+        /* Navigation bar styling */
         .nav {
             background-color: #456943;
             display: flex;
-            justify-content: center; /* Centers the navigation links */
-            align-items: center; /* Ensures vertical alignment */
+            justify-content: center;
             padding: 10px 0;
-            position: sticky; /* Makes the navbar sticky */
+            position: sticky;
             top: 0;
-            z-index: 1000; /* Keeps the navbar above other content */
-            width: 100%; /* Ensures the nav bar spans the full width */
+            z-index: 1000;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            flex-wrap: wrap;
         }
 
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            display: block;
-            text-align: center; /* Ensures the text inside links are centered */
+            padding: 8px 15px; /* Adjusted padding for closer buttons */
+            flex: none; /* Prevent the buttons from expanding */
+            text-align: center;
+            margin: 0 5px; /* Added margin to make buttons more spaced */
         }
 
         .nav a:hover {
             background-color: #555;
-            color: orange;
+            color: orange; 
             text-decoration: underline;
         }
 
-        /* Added :active state for links */
-        a:active {
-            color: red; /* Changes color to red when the link is clicked */
-        }
-
-        .container {
-            max-width: 800px;
+        /* Contact Section Styling */
+        .pastel-box {
+            background-color: #ffffff; /* Changed to white */
+            padding: 30px;
+            border-radius: 15px;
             margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: left;
-            line-height: 1.6;
+            width: 90%; /* Increased width */
+            max-width: 1200px; /* Increased max-width */
+            box-sizing: border-box;
         }
 
-        h2 {
-            margin-bottom: 20px;
+        /* Contact Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        h3 {
-            margin-top: 20px;
+        form input, form textarea {
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        form input[type="text"], form input[type="email"] {
+            border: 2px solid orange;
+        }
+
+        form textarea {
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form button {
+            background-color: #1B5448; /* Same color as footer and nav */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555; /* Darker shade on hover */
+        }
+
+        /* Map Section */
+        .map-container {
+            margin-top: 30px;
+            text-align: center;
         }
 
         .footer {
@@ -78,63 +117,21 @@
             color: white;
             text-align: center;
             padding: 20px;
-            position: fixed; /* Keeps the footer at the bottom */
-            bottom: 0;
+            position: fixed;
+            bottom: -19px;
             width: 100%;
+            z-index: 1000;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav {
-                flex-direction: column; /* Stacks nav items on smaller screens */
-            }
-
-            .header h1 {
-                font-size: 24px;
-            }
-
-            .container {
-                width: 90%;
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 20px;
-            }
-
-            .nav a {
-                padding: 8px 15px;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            .footer {
-                padding: 15px;
-            }
-        }
-
-        /* Map section styles */
-        .map-section {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .map-section iframe {
-            width: 100%;
-            height: 400px;
-            border: 0;
-        }
+        
     </style>
 </head>
 <body>
+
     <div class="header">
-        <h1>Contact us</h1>
-        <p>Learn more about this website and the creator.</p>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Reach out to us for any inquiries or feedback.</p>
     </div>
+
     <div class="nav">
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/HTMLPage1.html">Home</a>
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/About.html">About</a>
@@ -143,69 +140,37 @@
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Dashboard.html">Dashboard</a>
         <a href="https://dreamy-licious.github.io/Lab-Activity-3-4-WEB-PAGE-/Gallery%20page.html">Gallery</a>
     </div>
-    <div class="container">
-        <h2>About This Website</h2>
-        <p>
-            Welcome to my website! This site was created to showcase my passion for web development and motorsports. As a student in BSIT, I've combined my love for technology with my interest in racing, resulting in this platform to explore coding, tutorials, and automotive topics.
-        </p>
-        <p>
-            If you're looking for information on coding techniques, web development tutorials, or the latest trends in motorsports and technology, you've come to the right place! Feel free to explore the blog, gallery, and dashboard for some exciting content.
-        </p>
-        <br />
-        <h2>About the Creator</h2>
-        <p>
-            Hi! I'm a web development enthusiast and a BSIT student with a passion for both technology and motorsports. I've always been fascinated by how technology drives innovation, whether it's in creating websites or designing high-performance vehicles.
-        </p>
-        <p>
-            This website represents my journey of combining these two worlds. I love sharing knowledge through tutorials and articles, and I'm always eager to connect with others who share similar interests in coding, tech, or racing.
-        </p>
-        <br />
-        <h2>Contact the Creator</h2>
-        <p>
-            If you have any questions, suggestions, or simply want to connect, feel free to reach out to me. I'm happy to discuss web development, motorsports, or anything else you're interested in. You can contact me directly via email, or use the form below to send a message.
-        </p>
-        <br />
-        <h3>Reach Me Via Email</h3>
-        <p>Email: <a href="mailto:john.marloh.taylan@adamson.edu.ph">john.marloh.taylan@adamson.edu.ph</a></p>
-        <p>Facebook: <a href="https://www.facebook.com">FaceBook.com</a></p>
 
-        <h3>Or Use the Contact Form Below:</h3>
-        <form action="mailto:john.marloh.taylan@adamson.edu.ph" method="post" enctype="text/plain">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+    <section id="contact" class="pastel-box">
+        <h2 style="text-align: center; font-size: 28px; color: purple; margin-bottom: 20px;">Get in touch</h2>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+        <form action="#" method="POST">
+            <!-- Name Input -->
+            <input type="text" name="name" placeholder="Your Name" required>
 
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <!-- Email Input -->
+            <input type="email" name="email" placeholder="Your Email" required>
 
-            <input type="submit" value="Send Message">
+            <!-- Message Textarea -->
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit →</button>
         </form>
 
-        <h2>Creator Information</h2>
-        <p><strong>Website Creator:</strong> John Marloh G. Taylan</p>
-        <p><strong>Address:</strong> Cavite, Bacoor City, Niog II</p>
-        <p><strong>Contact No:</strong> 0912345678</p>
-        <p><strong>School:</strong> Adamson University</p>
-        <p><strong>Course & Year:</strong> BSIT 1st year</p>
-        <p><strong>Subject:</strong> Web Design Principle Lab</p>
-
         <!-- Map Section -->
-        <div class="map-section">
+        <div class="map-container">
             <h3>Find us here:</h3>
-            <p>We're located at 900 San Marcelino St Ermita Manila via Google Maps:</p>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345!2d120.98765!3d14.59951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x0000000000000000!2s900%20San%20Marcelino%20St%20Ermita%20Manila!5e0!3m2!1sen!2sph!4v1615972633768!5m2!1sen!2sph"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.486165723307!2d120.98460251544654!3d14.599798489799471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca23f9b02bb7%3A0x45f30a2b5ed0fa7a!2s900%20San%20Marcelino%20St%2C%20Ermita%2C%20Manila%2C%201004%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1715233230197!5m2!1sen!2sph"
+                width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy">
             </iframe>
         </div>
+    </section>
 
-    </div>
     <div class="footer">
-        <p>© 2025 My Blog. All rights reserved.</p>
+        <p>© 2025 My Art Gallery Website. All rights reserved.</p>
     </div>
+
 </body>
 </html>
